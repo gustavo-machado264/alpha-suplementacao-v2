@@ -457,7 +457,7 @@ const PRODUTOS = [
     imagem: "images/growth-camiseta-oversized.webp",
     descricao: "Modelagem oversized moderna, gola canelada de 3cm, tecido pesado 100% algodão de alto toque para treino ou casual.",
     sabor: "Vestuário",
-    saboresDisponiveis: ["Tamanho P", "Tamanho M", "Tamanho G", "Tamanho GG"],
+    saboresDisponiveis: ["Tamanho P", "Tamanho M", "Tamanho G", "Tamanho GG", "Tamanho G1", "Tamanho G2", "Tamanho G3"],
     destaque: false,
     maisVendido: null,
     badgePromo: null,
