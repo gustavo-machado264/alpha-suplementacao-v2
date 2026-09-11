@@ -1610,7 +1610,7 @@ img {
 .org-card.org-tecnico { border-top-color: #60a5fa; }
 .org-card.org-promocao { border-top-color: #f59e0b; }
 .org-card.org-publico { border-top-color: #a78bfa; }
-.org-avatar { width: 35px; height: 35px; display: grid; place-items: center; margin-bottom: 4px; border-radius: 50%; background: var(--cor-vermelho); color: #fff; font-size: .7rem; font-weight: 900; }
+.org-avatar { width: 48px; height: 48px; display: block; object-fit: cover; margin-bottom: 4px; border: 2px solid var(--cor-vermelho); border-radius: 50%; background: var(--cor-vermelho); color: #fff; font-size: .7rem; font-weight: 900; }
 .org-tecnico .org-avatar { background: #2563eb; }
 .org-promocao .org-avatar { background: #d97706; }
 .org-publico .org-avatar { background: #7c3aed; }
@@ -1622,9 +1622,11 @@ img {
 .org-branch { position: relative; padding: 0 0 10px; overflow: visible; }
 .org-branch::before { content: ''; position: absolute; top: -16px; left: 50%; width: 2px; height: 16px; background: var(--cor-vermelho); }
 .org-branch-head { padding: 13px 14px; color: #fff; background: rgba(225,29,72,.22); font-size: .88rem; font-weight: 900; letter-spacing: .5px; text-transform: uppercase; }
-.org-level { position: relative; display: grid; gap: 3px; margin: 0 14px; padding: 12px 12px 12px 20px; border-left: 1px solid var(--cor-borda-suave); border-bottom: 1px solid var(--cor-borda); background: rgba(8,8,10,.5); }
+.org-level { position: relative; display: flex; align-items: center; gap: 10px; margin: 0 14px; padding: 10px 12px 10px 20px; border-left: 1px solid var(--cor-borda-suave); border-bottom: 1px solid var(--cor-borda); background: rgba(8,8,10,.5); }
 .org-level::before { content: ''; position: absolute; left: 0; top: 24px; width: 12px; height: 1px; background: var(--cor-vermelho); }
 .org-level:last-child { border-bottom: 0; }
+.org-level img { width: 38px; height: 38px; flex: 0 0 38px; object-fit: cover; border: 1px solid var(--cor-borda-suave); border-radius: 8px; }
+.org-level div { display: grid; gap: 3px; }
 .org-level strong { color: #fff; font-size: .74rem; }
 .org-level span { color: var(--cor-texto-mutado); font-size: .69rem; line-height: 1.35; }
 .footer-organograma-trigger { display: inline-flex; gap: 7px; align-items: center; text-align: left; }
