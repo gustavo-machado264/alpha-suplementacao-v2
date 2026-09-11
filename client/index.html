@@ -1,26 +1,475 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Alpha Suplementação | Loja Oficial de Suplementos</title>
+  <!-- Google Fonts: Montserrat para estilo esportivo e moderno -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Alpha Suplementação</title>    
-    <!-- THIS IS THE START OF A COMMENT BLOCK, BLOCK TO BE DELETED: Google Fonts here, example:
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    THIS IS THE END OF A COMMENT BLOCK, BLOCK TO BE DELETED -->
-  </head>
+  <!-- Top bar de avisos -->
+  <aside class="top-bar-promo" aria-label="Avisos promocionais">
+    <div class="container">
+      🔥 <strong>ALPHA PRIME:</strong> Compras acima de <strong>R$ 250</strong> ganham brinde exclusivo!
+    </div>
+  </aside>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Marca / Logo -->
+      <a href="#inicio" class="logo-link" onclick="limparFiltros()">
+        <div class="logo-icone">α</div>
+        <div class="logo-texto">ALPHA <span>SUPLEMENTAÇÃO</span></div>
+      </a>
 
+      <!-- Menu de Navegação -->
+      <nav class="nav-menu" id="menu-nav-links" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link ativo" onclick="fecharMenuMobile()">Início</a>
+        <a href="#produtos-secao" class="nav-link" onclick="fecharMenuMobile()">Produtos</a>
+        <a href="#categorias-secao" class="nav-link" onclick="fecharMenuMobile()">Categorias</a>
+        <a href="#marcas-secao" class="nav-link" onclick="fecharMenuMobile()">Marcas</a>
+        <a href="#ofertas-secao" class="nav-link" onclick="fecharMenuMobile()">Promoções</a>
+      </nav>
+
+      <!-- Ações do Cabeçalho: Pesquisa, Carrinho e Menu Hambúrguer -->
+      <div class="header-acoes">
+        <div class="busca-box">
+          <svg class="busca-icone" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="input-pesquisa"
+            class="busca-input"
+            placeholder="Buscar creatina, whey..."
+            aria-label="Campo de pesquisa"
+          />
+        </div>
+
+        <button class="btn-carrinho" id="btn-abrir-carrinho" onclick="abrirCarrinhoDrawer()" aria-label="Abrir carrinho de compras">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="badge-carrinho-qtd" id="badge-carrinho-qtd" style="display: none;">0</span>
+        </button>
+
+        <button class="btn-hamburger" id="btn-hamburger" onclick="alternarMenuMobile()" aria-label="Menu principal">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO CARROSSEL -->
+  <section class="hero-carrossel" id="inicio" aria-label="Banners Promocionais">
+    <!-- Slide 1 -->
+    <div class="hero-slide ativo">
+      <div class="hero-slide-bg" style="background-image: url('images/banners/banner1-bg.jpg');"></div>
+      <div class="container" style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center;">
+        <div class="hero-slide-conteudo">
+          <span class="hero-tag">OFERTA ESPECIAL</span>
+          <h1 class="hero-titulo">COMPRE 1, <span>LEVE 2</span></h1>
+          <p class="hero-subtitulo">Promoções especiais em produtos selecionados.</p>
+          <button class="btn-primario" onclick="rolarParaSecao('ofertas-secao')">
+            Ver promoção
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide">
+      <div class="hero-slide-bg" style="background-image: url('images/banners/banner2-bg.jpg');"></div>
+      <div class="container" style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center;">
+        <div class="hero-slide-conteudo">
+          <span class="hero-tag">SUPER COMBO</span>
+          <h2 class="hero-titulo">COMPRE 2, <span>LEVE 1 GRÁTIS</span></h2>
+          <p class="hero-subtitulo">Escolha seus suplementos favoritos.</p>
+          <button class="btn-primario" onclick="rolarParaSecao('ofertas-secao')">
+            Confira as ofertas
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide">
+      <div class="hero-slide-bg" style="background-image: url('images/banners/banner3-bg.jpg');"></div>
+      <div class="container" style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center;">
+        <div class="hero-slide-conteudo">
+          <span class="hero-tag">BRINDE EXCLUSIVO</span>
+          <h2 class="hero-titulo">COMPRAS ACIMA DE R$ 250<br /><span>GANHE UM BRINDE</span></h2>
+          <p class="hero-subtitulo">Eleve seus treinos ao nível Alpha com brindes oficiais.</p>
+          <button class="btn-primario" onclick="rolarParaSecao('produtos-secao')">
+            Comprar agora
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Setas de navegação -->
+    <button class="hero-btn-nav hero-btn-prev" onclick="mudarSlide(-1)" aria-label="Slide anterior">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="hero-btn-nav hero-btn-next" onclick="mudarSlide(1)" aria-label="Próximo slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="hero-dots">
+      <button class="hero-dot ativo" onclick="irParaSlide(0)" aria-label="Ir para banner 1"></button>
+      <button class="hero-dot" onclick="irParaSlide(1)" aria-label="Ir para banner 2"></button>
+      <button class="hero-dot" onclick="irParaSlide(2)" aria-label="Ir para banner 3"></button>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <section class="secao-categorias" id="categorias-secao">
+    <div class="container">
+      <div class="secao-titulo-box">
+        <span class="subtitulo-tag">Navegação Rápida</span>
+        <h2 class="secao-titulo">Categorias</h2>
+        <p class="secao-desc">Selecione uma categoria para filtrar os suplementos instantaneamente</p>
+      </div>
+
+      <div class="grid-categorias">
+        <div class="card-categoria" data-categoria="Whey" onclick="filtrarPorCategoria('Whey')">
+          <span class="card-categoria-icone">🥛</span>
+          <span class="card-categoria-nome">Whey Protein</span>
+        </div>
+        <div class="card-categoria" data-categoria="Creatina" onclick="filtrarPorCategoria('Creatina')">
+          <span class="card-categoria-icone">⚡</span>
+          <span class="card-categoria-nome">Creatina</span>
+        </div>
+        <div class="card-categoria" data-categoria="Pré-treino" onclick="filtrarPorCategoria('Pré-treino')">
+          <span class="card-categoria-icone">🔥</span>
+          <span class="card-categoria-nome">Pré-treino</span>
+        </div>
+        <div class="card-categoria" data-categoria="Proteínas" onclick="filtrarPorCategoria('Whey')">
+          <span class="card-categoria-icone">💪</span>
+          <span class="card-categoria-nome">Proteínas</span>
+        </div>
+        <div class="card-categoria" data-categoria="Barras" onclick="filtrarPorCategoria('Barras')">
+          <span class="card-categoria-icone">🍫</span>
+          <span class="card-categoria-nome">Barras proteicas</span>
+        </div>
+        <div class="card-categoria" data-categoria="Pasta de amendoim" onclick="filtrarPorCategoria('Pasta de amendoim')">
+          <span class="card-categoria-icone">🥜</span>
+          <span class="card-categoria-nome">Pasta amendoim</span>
+        </div>
+        <div class="card-categoria" data-categoria="Vitaminas" onclick="filtrarPorCategoria('Vitaminas')">
+          <span class="card-categoria-icone">💊</span>
+          <span class="card-categoria-nome">Vitaminas</span>
+        </div>
+        <div class="card-categoria" data-categoria="Termogênicos" onclick="filtrarPorCategoria('Termogênicos')">
+          <span class="card-categoria-icone">🌡️</span>
+          <span class="card-categoria-nome">Termogênicos</span>
+        </div>
+        <div class="card-categoria" data-categoria="Camisetas" onclick="filtrarPorCategoria('Camisetas')">
+          <span class="card-categoria-icone">👕</span>
+          <span class="card-categoria-nome">Camisetas</span>
+        </div>
+        <div class="card-categoria" data-categoria="Acessórios" onclick="filtrarPorCategoria('Acessórios')">
+          <span class="card-categoria-icone">🥤</span>
+          <span class="card-categoria-nome">Coqueteleiras</span>
+        </div>
+        <div class="card-categoria" data-categoria="Acessórios" onclick="filtrarPorCategoria('Acessórios')">
+          <span class="card-categoria-icone">🍶</span>
+          <span class="card-categoria-nome">Garrafas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPAIS MARCAS -->
+  <section class="secao-marcas" id="marcas-secao">
+    <div class="container">
+      <div class="secao-titulo-box">
+        <span class="subtitulo-tag">Parceiros Oficiais</span>
+        <h2 class="secao-titulo">Principais marcas</h2>
+        <p class="secao-desc">Trabalhamos apenas com produtos originais com laudo de pureza comprovado</p>
+      </div>
+
+      <div class="grid-marcas">
+        <div class="card-marca-btn" data-marca="Integralmedica" onclick="filtrarPorMarca('Integralmedica')">
+          <h4>INTEGRALMEDICA</h4>
+          <span>Líder em nutrição esportiva</span>
+        </div>
+        <div class="card-marca-btn" data-marca="Dark Lab" onclick="filtrarPorMarca('Dark Lab')">
+          <h4>DARK LAB</h4>
+          <span>Hardcore & alta pureza</span>
+        </div>
+        <div class="card-marca-btn" data-marca="Max Titanium" onclick="filtrarPorMarca('Max Titanium')">
+          <h4>MAX TITANIUM</h4>
+          <span>Qualidade & performance</span>
+        </div>
+        <div class="card-marca-btn" data-marca="Dr. Peanut" onclick="filtrarPorMarca('Dr. Peanut')">
+          <h4>DR. PEANUT</h4>
+          <span>Pastas e alfajores gourmet</span>
+        </div>
+        <div class="card-marca-btn" data-marca="Growth Supplements" onclick="filtrarPorMarca('Growth Supplements')">
+          <h4>GROWTH</h4>
+          <span>O melhor custo-benefício</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO MAIS VENDIDOS -->
+  <section class="secao-produtos" id="mais-vendidos-secao">
+    <div class="container">
+      <div class="secao-titulo-box">
+        <span class="subtitulo-tag">Preferidos dos Atletas</span>
+        <h2 class="secao-titulo">Mais vendidos</h2>
+        <p class="secao-desc">Os suplementos mais procurados e bem avaliados da loja</p>
+      </div>
+
+      <div class="grid-produtos" id="grid-mais-vendidos">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER DINÂMICO DE BRINDE (R$ 250) -->
+  <section class="secao-banner-brinde">
+    <div class="container">
+      <div class="banner-brinde-card">
+        <div class="banner-brinde-info">
+          <div class="banner-brinde-icone">🎁</div>
+          <div>
+            <h3 class="banner-brinde-titulo">COMPRAS ACIMA DE R$ 250 = BRINDE EXCLUSIVO</h3>
+            <p class="banner-brinde-sub">Atinja o valor mínimo no carrinho e receba automaticamente um brinde oficial no seu pedido.</p>
+          </div>
+        </div>
+        <button class="btn-primario" onclick="rolarParaSecao('produtos-secao')">Aproveitar Ofertas</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO OFERTAS ALPHA -->
+  <section class="secao-produtos" id="ofertas-secao">
+    <div class="container">
+      <div class="secao-titulo-box">
+        <span class="subtitulo-tag">Economia Real</span>
+        <h2 class="secao-titulo">Ofertas Alpha</h2>
+        <p class="secao-desc">Produtos com promoções ativas: Leve 2 Pague 1, Leve 3 Pague 2 e Brindes</p>
+      </div>
+
+      <div class="grid-produtos" id="grid-ofertas-alpha">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS EM DESTAQUE E CATÁLOGO GERAL -->
+  <section class="secao-produtos" id="produtos-secao">
+    <div class="container">
+      <div class="secao-titulo-box">
+        <span class="subtitulo-tag">Catálogo Completo</span>
+        <h2 class="secao-titulo">Produtos em destaque</h2>
+        <p class="secao-desc" id="produtos-contador">Carregando catálogo...</p>
+      </div>
+
+      <!-- Barra de Filtros e Ordenação -->
+      <div class="barra-filtros">
+        <div class="filtro-item busca-filtro-container" style="width: 100%; margin-bottom: 8px;">
+          <input type="text" class="busca-input" id="input-pesquisa-grid" placeholder="🔍 Digite o produto, marca ou categoria (ex: Creatina, Integralmedica)..." style="width: 100%;" />
+        </div>
+        <div class="filtros-grupo-lado">
+          <!-- Filtro por Categoria -->
+          <div class="filtro-item">
+            <label for="filtro-categoria-select">Categoria:</label>
+            <select id="filtro-categoria-select" class="select-padrao">
+              <option value="Todos">Todas as categorias</option>
+              <option value="Whey">Whey Protein</option>
+              <option value="Creatina">Creatina</option>
+              <option value="Pré-treino">Pré-treino</option>
+              <option value="Barras">Barras Proteicas</option>
+              <option value="Pasta de amendoim">Pasta de Amendoim</option>
+              <option value="Vitaminas">Vitaminas</option>
+              <option value="Termogênicos">Termogênicos</option>
+              <option value="Acessórios">Acessórios / Coqueteleiras</option>
+              <option value="Camisetas">Camisetas / Roupas</option>
+            </select>
+          </div>
+
+          <!-- Filtro por Marca -->
+          <div class="filtro-item">
+            <label for="filtro-marca-select">Marca:</label>
+            <select id="filtro-marca-select" class="select-padrao">
+              <option value="Todas">Todas as marcas</option>
+              <option value="Integralmedica">Integralmedica</option>
+              <option value="Dark Lab">Dark Lab</option>
+              <option value="Max Titanium">Max Titanium</option>
+              <option value="Dr. Peanut">Dr. Peanut</option>
+              <option value="Growth Supplements">Growth Supplements</option>
+            </select>
+          </div>
+
+          <button class="btn-limpar-filtros" onclick="limparFiltros()">Limpar Filtros</button>
+        </div>
+
+        <!-- Ordenação -->
+        <div class="filtro-item">
+          <label for="select-ordenacao">Ordenar por:</label>
+          <select id="select-ordenacao" class="select-padrao">
+            <option value="padrao">Destaques</option>
+            <option value="mais-vendidos">Mais vendidos</option>
+            <option value="menos-vendidos">Menos vendidos</option>
+            <option value="menor-preco">Menor preço</option>
+            <option value="maior-preco">Maior preço</option>
+            <option value="maior-desconto">Maior desconto</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Grid Principal de Produtos -->
+      <div class="grid-produtos" id="grid-produtos">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- DRAWER DO CARRINHO DE COMPRAS -->
+  <div class="carrinho-overlay" id="carrinho-overlay" onclick="fecharCarrinhoDrawer()"></div>
+  <div class="carrinho-drawer" id="carrinho-drawer" role="dialog" aria-modal="true" aria-label="Carrinho de compras">
+    <div class="carrinho-header">
+      <h3 class="carrinho-titulo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        Meu Carrinho
+      </h3>
+      <button class="btn-fechar" onclick="fecharCarrinhoDrawer()" aria-label="Fechar carrinho">&times;</button>
+    </div>
+
+    <!-- Indicador de Brinde R$ 250 -->
+    <div id="carrinho-brinde-box" class="brinde-box brinde-pendente">
+      <!-- Calculado via JS -->
+    </div>
+
+    <!-- Itens do Carrinho -->
+    <div class="carrinho-corpo" id="carrinho-itens-lista">
+      <!-- Inserido dinamicamente via JS -->
+    </div>
+
+    <!-- Rodapé do Carrinho com Totais -->
+    <div class="carrinho-footer">
+      <div class="linha-resumo">
+        <span>Subtotal:</span>
+        <span id="carrinho-subtotal">R$ 0,00</span>
+      </div>
+      <div class="linha-resumo linha-total">
+        <span>Total:</span>
+        <strong id="carrinho-total">R$ 0,00</strong>
+      </div>
+      <button class="btn-primario btn-checkout" onclick="finalizarCompra()">
+        Finalizar compra
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL DE DETALHES DO PRODUTO -->
+  <div class="modal-overlay" id="modal-overlay" onclick="fecharModalProduto()"></div>
+  <div class="produto-modal" id="produto-modal" role="dialog" aria-modal="true">
+    <button class="modal-btn-fechar" onclick="fecharModalProduto()" aria-label="Fechar modal">&times;</button>
+    <div id="modal-conteudo">
+      <!-- Conteúdo injetado dinamicamente via JS -->
+    </div>
+  </div>
+
+  <!-- TOAST DE NOTIFICAÇÃO -->
+  <div id="toast-alpha" class="toast-alpha"></div>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Sobre a marca -->
+        <div class="footer-sobre-box">
+          <div class="logo-link">
+            <div class="logo-icone">α</div>
+            <div class="logo-texto">ALPHA <span>SUPLEMENTAÇÃO</span></div>
+          </div>
+          <p class="footer-slogan">"Suplementação para quem busca evolução."</p>
+          <div class="footer-redes">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-rede-social">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              Instagram
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn-rede-social">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Institucionais -->
+        <div>
+          <h4 class="footer-col-titulo">Navegação</h4>
+          <ul class="footer-links-lista">
+            <li><a href="#inicio" class="footer-link">Início</a></li>
+            <li><a href="#produtos-secao" class="footer-link">Produtos</a></li>
+            <li><a href="#categorias-secao" class="footer-link">Categorias</a></li>
+            <li><a href="#marcas-secao" class="footer-link">Marcas</a></li>
+            <li><a href="#ofertas-secao" class="footer-link">Promoções</a></li>
+          </ul>
+        </div>
+
+        <!-- Categorias Rápidas -->
+        <div>
+          <h4 class="footer-col-titulo">Categorias</h4>
+          <ul class="footer-links-lista">
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorCategoria('Whey')">Whey Protein</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorCategoria('Creatina')">Creatina</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorCategoria('Pré-treino')">Pré-treino</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorCategoria('Whey')">Proteínas</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorCategoria('Acessórios')">Acessórios</a></li>
+          </ul>
+        </div>
+
+        <!-- Marcas em Destaque -->
+        <div>
+          <h4 class="footer-col-titulo">Marcas Oficiais</h4>
+          <ul class="footer-links-lista">
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorMarca('Integralmedica')">Integralmedica</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorMarca('Dark Lab')">Dark Lab</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorMarca('Max Titanium')">Max Titanium</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorMarca('Dr. Peanut')">Dr. Peanut</a></li>
+            <li><a href="#produtos-secao" class="footer-link" onclick="filtrarPorMarca('Growth Supplements')">Growth Supplements</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Alpha Suplementação. Todos os direitos reservados. Projeto MVP Front-end Demonstrativo.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT JS PURO -->
+  <script type="module" src="script.js"></script>
+</body>
 </html>
