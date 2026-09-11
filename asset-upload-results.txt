@@ -1,0 +1,176 @@
+Uploading file (webdev private): client/images/darklab-protein-bar.jpg (size: 206444 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/darklab-protein-bar_b04543d8.jpg
+Uploading file (webdev private): client/images/drpeanut-pasta-brigadeiro.jpg (size: 334877 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/drpeanut-pasta-brigadeiro_27fafe5e.jpg
+Uploading file (webdev private): client/images/drpeanut-pasta-leite-po.jpg (size: 323899 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/drpeanut-pasta-leite-po_fa795343.jpg
+Uploading file (webdev private): client/images/growth-haze-pretreino.jpg (size: 75108 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/growth-haze-pretreino_bea364eb.jpg
+Uploading file (webdev private): client/images/integralmedica-creatina-hardcore.jpg (size: 122943 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-creatina-hardcore_e87ce32e.jpg
+Uploading file (webdev private): client/images/integralmedica-darkbar.jpg (size: 337351 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-darkbar_d843ea91.jpg
+Uploading file (webdev private): client/images/integralmedica-vitapure.jpg (size: 103688 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-vitapure_04f4574d.jpg
+Uploading file (webdev private): client/images/integralmedica-whey-100-pure.jpg (size: 82722 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-whey-100-pure_ce1704d1.jpg
+Uploading file (webdev private): client/images/maxtitanium-horus-pretreino.jpg (size: 56169 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/maxtitanium-horus-pretreino_b3616c0e.jpg
+Uploading file (webdev private): client/images/team-ana.jpg (size: 21032 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-ana_845936f1.jpg
+Uploading file (webdev private): client/images/team-bianca.jpg (size: 21630 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-bianca_2b4c9dfe.jpg
+Uploading file (webdev private): client/images/team-bruna.jpg (size: 19926 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-bruna_2b23a26f.jpg
+Uploading file (webdev private): client/images/team-caio.jpg (size: 15918 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-caio_655b2d99.jpg
+Uploading file (webdev private): client/images/team-clara.jpg (size: 18760 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-clara_2ce92949.jpg
+Uploading file (webdev private): client/images/team-diego.jpg (size: 16891 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-diego_ac18e40e.jpg
+Uploading file (webdev private): client/images/team-felipe.jpg (size: 19154 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-felipe_c791e188.jpg
+Uploading file (webdev private): client/images/team-gustavo.jpg (size: 18820 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-gustavo_a72fb4da.jpg
+Uploading file (webdev private): client/images/team-joao.jpg (size: 18730 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-joao_a4b6f62c.jpg
+Uploading file (webdev private): client/images/team-lucas.jpg (size: 16840 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-lucas_e80579ab.jpg
+Uploading file (webdev private): client/images/team-marina.jpg (size: 17373 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-marina_4a94c2c1.jpg
+Uploading file (webdev private): client/images/team-pedro.jpg (size: 16740 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-pedro_615ac7db.jpg
+Uploading file (webdev private): client/images/team-rafael.jpg (size: 17209 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-rafael_145a217d.jpg
+Uploading file (webdev private): client/images/team-ryan.jpg (size: 19200 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/team-ryan_db326fe3.jpg
+Uploading file (webdev private): client/images/alpha-camiseta-preta-branca.jpeg (size: 63296 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/alpha-camiseta-preta-branca_7e281b13.jpeg
+Uploading file (webdev private): client/images/darklab-whey-100.png (size: 961763 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/darklab-whey-100_3f61aa7c.png
+Uploading file (webdev private): client/images/drpeanut-alfajor-proteico.png (size: 665823 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/drpeanut-alfajor-proteico_3960ec22.png
+Uploading file (webdev private): client/images/integralmedica-therma-pro.png (size: 547939 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-therma-pro_416c8d07.png
+Uploading file (webdev private): client/images/integralmedica-whey-concentrado.png (size: 205718 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-whey-concentrado_8ca8ea0b.png
+Uploading file (webdev private): client/images/maxtitanium-100-whey.png (size: 660580 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/maxtitanium-100-whey_7099d441.png
+Uploading file (webdev private): client/images/maxtitanium-creatina.png (size: 561539 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/maxtitanium-creatina_11f0a700.png
+Uploading file (webdev private): client/images/maxtitanium-power-bar.png (size: 99836 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/maxtitanium-power-bar_8c3e39f9.png
+Uploading file (webdev private): client/images/darklab-creatina.webp (size: 13004 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/darklab-creatina_64d91ef9.webp
+Uploading file (webdev private): client/images/darklab-venom-pretreino.webp (size: 15426 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/darklab-venom-pretreino_37bf6788.webp
+Uploading file (webdev private): client/images/growth-camiseta-oversized.webp (size: 270354 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/growth-camiseta-oversized_263dca67.webp
+Uploading file (webdev private): client/images/growth-creatina-creapure.webp (size: 53446 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/growth-creatina-creapure_ca286a85.webp
+Uploading file (webdev private): client/images/growth-multivitaminico.webp (size: 17668 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/growth-multivitaminico_4e7fa5f5.webp
+Uploading file (webdev private): client/images/growth-whey-concentrado.webp (size: 30636 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/growth-whey-concentrado_930a3dc7.webp
+Uploading file (webdev private): client/images/integralmedica-coqueteleira.webp (size: 115876 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-coqueteleira_e9168803.webp
+Uploading file (webdev private): client/images/integralmedica-galao-garrafa.webp (size: 12892 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/integralmedica-galao-garrafa_e3956e15.webp
+Uploading file (webdev private): client/images/maxtitanium-2hot-termogenico.webp (size: 17354 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/maxtitanium-2hot-termogenico_a8906f36.webp
+Uploading file (webdev private): client/images/banners/banner1-bg.jpg (size: 21612 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/banner1-bg_91b7f68d.jpg
+Uploading file (webdev private): client/images/banners/banner2-bg.jpg (size: 21270 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/banner2-bg_d977b133.jpg
+Uploading file (webdev private): client/images/banners/banner3-bg.jpg (size: 21515 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/banner3-bg_246e7674.jpg
+
+========== Upload Summary ==========
+[SUCCESS] client/images/darklab-protein-bar.jpg -> /manus-storage/darklab-protein-bar_b04543d8.jpg
+[SUCCESS] client/images/drpeanut-pasta-brigadeiro.jpg -> /manus-storage/drpeanut-pasta-brigadeiro_27fafe5e.jpg
+[SUCCESS] client/images/drpeanut-pasta-leite-po.jpg -> /manus-storage/drpeanut-pasta-leite-po_fa795343.jpg
+[SUCCESS] client/images/growth-haze-pretreino.jpg -> /manus-storage/growth-haze-pretreino_bea364eb.jpg
+[SUCCESS] client/images/integralmedica-creatina-hardcore.jpg -> /manus-storage/integralmedica-creatina-hardcore_e87ce32e.jpg
+[SUCCESS] client/images/integralmedica-darkbar.jpg -> /manus-storage/integralmedica-darkbar_d843ea91.jpg
+[SUCCESS] client/images/integralmedica-vitapure.jpg -> /manus-storage/integralmedica-vitapure_04f4574d.jpg
+[SUCCESS] client/images/integralmedica-whey-100-pure.jpg -> /manus-storage/integralmedica-whey-100-pure_ce1704d1.jpg
+[SUCCESS] client/images/maxtitanium-horus-pretreino.jpg -> /manus-storage/maxtitanium-horus-pretreino_b3616c0e.jpg
+[SUCCESS] client/images/team-ana.jpg -> /manus-storage/team-ana_845936f1.jpg
+[SUCCESS] client/images/team-bianca.jpg -> /manus-storage/team-bianca_2b4c9dfe.jpg
+[SUCCESS] client/images/team-bruna.jpg -> /manus-storage/team-bruna_2b23a26f.jpg
+[SUCCESS] client/images/team-caio.jpg -> /manus-storage/team-caio_655b2d99.jpg
+[SUCCESS] client/images/team-clara.jpg -> /manus-storage/team-clara_2ce92949.jpg
+[SUCCESS] client/images/team-diego.jpg -> /manus-storage/team-diego_ac18e40e.jpg
+[SUCCESS] client/images/team-felipe.jpg -> /manus-storage/team-felipe_c791e188.jpg
+[SUCCESS] client/images/team-gustavo.jpg -> /manus-storage/team-gustavo_a72fb4da.jpg
+[SUCCESS] client/images/team-joao.jpg -> /manus-storage/team-joao_a4b6f62c.jpg
+[SUCCESS] client/images/team-lucas.jpg -> /manus-storage/team-lucas_e80579ab.jpg
+[SUCCESS] client/images/team-marina.jpg -> /manus-storage/team-marina_4a94c2c1.jpg
+[SUCCESS] client/images/team-pedro.jpg -> /manus-storage/team-pedro_615ac7db.jpg
+[SUCCESS] client/images/team-rafael.jpg -> /manus-storage/team-rafael_145a217d.jpg
+[SUCCESS] client/images/team-ryan.jpg -> /manus-storage/team-ryan_db326fe3.jpg
+[SUCCESS] client/images/alpha-camiseta-preta-branca.jpeg -> /manus-storage/alpha-camiseta-preta-branca_7e281b13.jpeg
+[SUCCESS] client/images/darklab-whey-100.png -> /manus-storage/darklab-whey-100_3f61aa7c.png
+[SUCCESS] client/images/drpeanut-alfajor-proteico.png -> /manus-storage/drpeanut-alfajor-proteico_3960ec22.png
+[SUCCESS] client/images/integralmedica-therma-pro.png -> /manus-storage/integralmedica-therma-pro_416c8d07.png
+[SUCCESS] client/images/integralmedica-whey-concentrado.png -> /manus-storage/integralmedica-whey-concentrado_8ca8ea0b.png
+[SUCCESS] client/images/maxtitanium-100-whey.png -> /manus-storage/maxtitanium-100-whey_7099d441.png
+[SUCCESS] client/images/maxtitanium-creatina.png -> /manus-storage/maxtitanium-creatina_11f0a700.png
+[SUCCESS] client/images/maxtitanium-power-bar.png -> /manus-storage/maxtitanium-power-bar_8c3e39f9.png
+[SUCCESS] client/images/darklab-creatina.webp -> /manus-storage/darklab-creatina_64d91ef9.webp
+[SUCCESS] client/images/darklab-venom-pretreino.webp -> /manus-storage/darklab-venom-pretreino_37bf6788.webp
+[SUCCESS] client/images/growth-camiseta-oversized.webp -> /manus-storage/growth-camiseta-oversized_263dca67.webp
+[SUCCESS] client/images/growth-creatina-creapure.webp -> /manus-storage/growth-creatina-creapure_ca286a85.webp
+[SUCCESS] client/images/growth-multivitaminico.webp -> /manus-storage/growth-multivitaminico_4e7fa5f5.webp
+[SUCCESS] client/images/growth-whey-concentrado.webp -> /manus-storage/growth-whey-concentrado_930a3dc7.webp
+[SUCCESS] client/images/integralmedica-coqueteleira.webp -> /manus-storage/integralmedica-coqueteleira_e9168803.webp
+[SUCCESS] client/images/integralmedica-galao-garrafa.webp -> /manus-storage/integralmedica-galao-garrafa_e3956e15.webp
+[SUCCESS] client/images/maxtitanium-2hot-termogenico.webp -> /manus-storage/maxtitanium-2hot-termogenico_a8906f36.webp
+[SUCCESS] client/images/banners/banner1-bg.jpg -> /manus-storage/banner1-bg_91b7f68d.jpg
+[SUCCESS] client/images/banners/banner2-bg.jpg -> /manus-storage/banner2-bg_d977b133.jpg
+[SUCCESS] client/images/banners/banner3-bg.jpg -> /manus-storage/banner3-bg_246e7674.jpg
+=====================================
+Total: 43, Success: 43, Failed: 0
