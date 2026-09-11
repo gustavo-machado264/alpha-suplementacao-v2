@@ -78,11 +78,11 @@
       <div class="hero-slide-bg" style="background-image: url('images/banners/banner1-bg.jpg');"></div>
       <div class="container" style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center;">
         <div class="hero-slide-conteudo">
-          <span class="hero-tag">OFERTA ESPECIAL</span>
-          <h1 class="hero-titulo">COMPRE 1, <span>LEVE 2</span></h1>
-          <p class="hero-subtitulo">Promoções especiais em produtos selecionados.</p>
-          <button class="btn-primario" onclick="rolarParaSecao('ofertas-secao')">
-            Ver promoção
+          <span class="hero-tag">NOVIDADE ALPHA</span>
+          <h1 class="hero-titulo">CAMISETA <span>ALPHA</span></h1>
+          <p class="hero-subtitulo">Nossa primeira peça oficial: preta, branca e feita para quem busca mais do que o básico.</p>
+          <button class="btn-primario" onclick="rolarParaSecao('camisetas-secao')">
+            Ver camiseta
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
         </div>
@@ -131,7 +131,7 @@
 
     <!-- Indicadores -->
     <div class="hero-dots">
-      <button class="hero-dot ativo" onclick="irParaSlide(0)" aria-label="Ir para banner 1"></button>
+      <button class="hero-dot ativo" onclick="irParaSlide(0)" aria-label="Ir para novidade Alpha"></button>
       <button class="hero-dot" onclick="irParaSlide(1)" aria-label="Ir para banner 2"></button>
       <button class="hero-dot" onclick="irParaSlide(2)" aria-label="Ir para banner 3"></button>
     </div>
@@ -190,6 +190,55 @@
         <div class="card-categoria" data-categoria="Acessórios" onclick="filtrarPorCategoria('Acessórios')">
           <span class="card-categoria-icone">🍶</span>
           <span class="card-categoria-nome">Garrafas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMISETAS ALPHA: catálogo dedicado com duas abas -->
+  <section class="secao-camisetas" id="camisetas-secao">
+    <div class="container">
+      <div class="secao-titulo-box">
+        <span class="subtitulo-tag">Alpha Wear</span>
+        <h2 class="secao-titulo">Camiseta Alpha</h2>
+        <p class="secao-desc">A peça oficial em preto e branco, com visual forte para treino e rotina.</p>
+      </div>
+
+      <div class="camiseta-tabs" role="tablist" aria-label="Informações da camiseta">
+        <button class="camiseta-tab ativo" role="tab" aria-selected="true" data-tab="produto" onclick="alternarAbaCamiseta('produto', this)">Produto</button>
+        <button class="camiseta-tab" role="tab" aria-selected="false" data-tab="tamanhos" onclick="alternarAbaCamiseta('tamanhos', this)">Tamanhos</button>
+      </div>
+
+      <div class="camiseta-tab-panel ativo" id="camiseta-tab-produto" role="tabpanel">
+        <div class="camiseta-showcase">
+          <div class="camiseta-imagem-wrap">
+            <img src="images/alpha-camiseta-preta-branca.jpeg" alt="Camiseta Alpha preta e branca, frente e costas" class="camiseta-imagem" />
+            <span class="camiseta-selo">EDIÇÃO OFICIAL</span>
+          </div>
+          <div class="camiseta-copy">
+            <span class="card-marca">ALPHA SUPLEMENTAÇÃO</span>
+            <h3>Camiseta Alpha — Preta &amp; Branca</h3>
+            <p>Modelo oficial com identidade Alpha, tecido confortável e estampa frente e costas. A foto poderá ser substituída quando você enviar a versão final.</p>
+            <div class="camiseta-price">R$ 89,90</div>
+            <div class="camiseta-size-hint">Escolha o tamanho na aba ao lado antes de finalizar.</div>
+            <button class="btn-primario" onclick="filtrarPorCategoria('Camisetas')">Ver no catálogo</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="camiseta-tab-panel" id="camiseta-tab-tamanhos" role="tabpanel" hidden>
+        <div class="tamanhos-panel">
+          <div>
+            <span class="subtitulo-tag">Grade disponível</span>
+            <h3>Tamanhos da camiseta</h3>
+            <p>Use esta tabela como base para a primeira versão da loja. As medidas podem ser ajustadas depois conforme a modelagem final.</p>
+          </div>
+          <div class="tamanhos-grid">
+            <div class="tamanho-card"><strong>P</strong><span>Peito 52 cm</span><span>Comprimento 70 cm</span></div>
+            <div class="tamanho-card"><strong>M</strong><span>Peito 55 cm</span><span>Comprimento 72 cm</span></div>
+            <div class="tamanho-card"><strong>G</strong><span>Peito 58 cm</span><span>Comprimento 74 cm</span></div>
+            <div class="tamanho-card"><strong>GG</strong><span>Peito 61 cm</span><span>Comprimento 76 cm</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -266,7 +315,7 @@
       <div class="secao-titulo-box">
         <span class="subtitulo-tag">Economia Real</span>
         <h2 class="secao-titulo">Ofertas Alpha</h2>
-        <p class="secao-desc">Produtos com promoções ativas: Leve 2 Pague 1, Leve 3 Pague 2 e Brindes</p>
+        <p class="secao-desc">Produtos com descontos especiais, combos selecionados e brindes Alpha</p>
       </div>
 
       <div class="grid-produtos" id="grid-ofertas-alpha">
@@ -435,6 +484,7 @@
             <li><a href="#categorias-secao" class="footer-link">Categorias</a></li>
             <li><a href="#marcas-secao" class="footer-link">Marcas</a></li>
             <li><a href="#ofertas-secao" class="footer-link">Promoções</a></li>
+            <li><button class="footer-link footer-organograma-trigger" type="button" onclick="alternarOrganograma()" aria-expanded="false" aria-controls="organograma-painel">Organograma <span>+</span></button></li>
           </ul>
         </div>
 
@@ -462,6 +512,33 @@
           </ul>
         </div>
       </div>
+
+      <section class="organograma-painel" id="organograma-painel" hidden aria-label="Organograma da Alpha Suplementação">
+        <div class="organograma-heading">
+          <div>
+            <span class="subtitulo-tag">Estrutura Alpha</span>
+            <h3>Organograma</h3>
+            <p>Divisão inicial de responsabilidades para orientar o desenvolvimento da operação.</p>
+          </div>
+          <button class="btn-secundario" type="button" onclick="alternarOrganograma()">Fechar</button>
+        </div>
+
+        <div class="organograma-vertical">
+          <div class="organograma-topo">
+            <article class="org-card org-direcao"><span class="org-avatar">RY</span><strong>Ryan</strong><small>Direção &amp; coordenação geral</small></article>
+            <article class="org-card org-tecnico"><span class="org-avatar">FE</span><strong>Felipe</strong><small>Técnico — plataforma e site</small></article>
+            <article class="org-card org-tecnico"><span class="org-avatar">PE</span><strong>Pedro</strong><small>Técnico — dados e suporte</small></article>
+            <article class="org-card org-promocao"><span class="org-avatar">JO</span><strong>João</strong><small>Promoção e campanhas</small></article>
+            <article class="org-card org-publico"><span class="org-avatar">GU</span><strong>Gustavo</strong><small>Comunicação com o público</small></article>
+          </div>
+          <div class="org-connector"></div>
+          <div class="org-ramificacoes">
+            <article class="org-branch"><div class="org-branch-head">Operação &amp; logística</div><div class="org-team"><span>Marina — estoque</span><span>Lucas — depósito</span><span>Caio — separação e expedição</span></div></article>
+            <article class="org-branch"><div class="org-branch-head">Comercial &amp; relacionamento</div><div class="org-team"><span>Ana — atendimento</span><span>Bruna — pós-venda</span><span>Diego — parcerias</span></div></article>
+            <article class="org-branch"><div class="org-branch-head">Conteúdo &amp; crescimento</div><div class="org-team"><span>Bianca — redes sociais</span><span>Rafael — design</span><span>Clara — calendário promocional</span></div></article>
+          </div>
+        </div>
+      </section>
 
       <div class="footer-copyright">
         &copy; 2026 Alpha Suplementação. Todos os direitos reservados. Projeto MVP Front-end Demonstrativo.

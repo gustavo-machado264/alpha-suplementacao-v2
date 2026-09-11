@@ -20,8 +20,8 @@ const PRODUTOS = [
     saboresDisponiveis: ["Chocolate Maltado", "Baunilha", "Morango"],
     destaque: true,
     maisVendido: 1,
-    badgePromo: "LEVE 2 PAGANDO 1",
-    emOferta: true
+    badgePromo: null,
+    emOferta: false
   },
   {
     id: 2,
@@ -166,8 +166,8 @@ const PRODUTOS = [
     saboresDisponiveis: ["Chocolate Belga", "Morango Silvestre", "Baunilha"],
     destaque: true,
     maisVendido: null,
-    badgePromo: "LEVE 2 PAGANDO 1",
-    emOferta: true
+    badgePromo: null,
+    emOferta: false
   },
   {
     id: 10,
@@ -240,8 +240,8 @@ const PRODUTOS = [
     saboresDisponiveis: ["Chocolate Maltado", "Baunilha", "Morango"],
     destaque: true,
     maisVendido: null,
-    badgePromo: "LEVE 2 PAGANDO 1",
-    emOferta: true
+    badgePromo: null,
+    emOferta: false
   },
   {
     id: 14,
@@ -406,8 +406,8 @@ const PRODUTOS = [
     saboresDisponiveis: ["Sem sabor (Natural)"],
     destaque: true,
     maisVendido: null,
-    badgePromo: "LEVE 2 PAGANDO 1",
-    emOferta: true
+    badgePromo: null,
+    emOferta: false
   },
   {
     id: 23,
@@ -1116,6 +1116,36 @@ function fecharMenuMobile() {
 }
 
 // ==========================================
+// CAMISETAS E ORGANOGRAMA
+// ==========================================
+function alternarAbaCamiseta(aba, botao) {
+  document.querySelectorAll('.camiseta-tab').forEach((tab) => {
+    const ativo = tab === botao;
+    tab.classList.toggle('ativo', ativo);
+    tab.setAttribute('aria-selected', ativo ? 'true' : 'false');
+  });
+  document.querySelectorAll('.camiseta-tab-panel').forEach((panel) => {
+    const ativo = panel.id === `camiseta-tab-${aba}`;
+    panel.classList.toggle('ativo', ativo);
+    panel.hidden = !ativo;
+  });
+}
+
+function alternarOrganograma() {
+  const painel = document.getElementById('organograma-painel');
+  const gatilhos = document.querySelectorAll('.footer-organograma-trigger');
+  if (!painel) return;
+  const vaiAbrir = painel.hidden;
+  painel.hidden = !vaiAbrir;
+  gatilhos.forEach((gatilho) => {
+    gatilho.setAttribute('aria-expanded', vaiAbrir ? 'true' : 'false');
+    const indicador = gatilho.querySelector('span');
+    if (indicador) indicador.textContent = vaiAbrir ? '−' : '+';
+  });
+  if (vaiAbrir) painel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ==========================================
 // INICIALIZAÇÃO GERAL DO DOCUMENTO
 // ==========================================
 
@@ -1188,3 +1218,5 @@ window.mudarSlide = mudarSlide;
 window.irParaSlide = irParaSlide;
 window.alternarMenuMobile = alternarMenuMobile;
 window.fecharMenuMobile = fecharMenuMobile;
+window.alternarAbaCamiseta = alternarAbaCamiseta;
+window.alternarOrganograma = alternarOrganograma;
